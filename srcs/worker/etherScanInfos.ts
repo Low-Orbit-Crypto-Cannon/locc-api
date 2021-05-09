@@ -4,7 +4,7 @@ const request = require('request');
 const log = factory.getLogger("oracle");
 class EtherScanInfos
 {
-    url: string = "https://etherscan.io/token/0x9f9c8ec3534c3ce16f928381372bfbfbfb9f4d24"
+    url: string = "https://etherscan.io/token/
     public price: number = 0.00
     public supply: number = 0.00
 
