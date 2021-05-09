@@ -73,8 +73,8 @@ class CoinsPriceCache
     async refreshPrices()
     {
         try {
-            await this.refreshLOCCPrice()
             await this.refreshWethPrice()
+            await this.refreshLOCCPrice()
         } catch (e) { console.error(e) }
     }
 

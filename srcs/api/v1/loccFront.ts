@@ -7,8 +7,8 @@ import { coinPriceCache } from "../../worker/coinsPriceCache";
 router.get('/token', async (_: any, result: any) => {
     try {
         const datas: any = {}
-        datas.ethPrice = coinPriceCache.prices.find(x => x.coin === "WETH").price
-        const locc = coinPriceCache.prices.find(x => x.coin === "LOCC").price
+        datas.ethPrice = coinPriceCache.prices.find(x => x.coin === "WETH")?.price
+        const locc = coinPriceCache.prices.find(x => x.coin === "LOCC")?.price
         datas.loccPrice = datas.ethPrice / locc
 
         return result.send({result: true, uni: datas, etherscan: {price: etherScan.price, supply: etherScan.supply, addresses: etherScan.addresses}});
